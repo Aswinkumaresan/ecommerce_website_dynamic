@@ -1,124 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>E-commerce</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="header_section">
-        <div class="container">
-            <div class="row align-center">
-                <div class="col-3">
-                    <div class="header_logo">
-                        <img src="./assests/logo.png" alt="logo">
-                    </div>
-                </div>
-                <div class="col-7">
-                   
-                    
-                    <div class="header_info">
-                        <div class="dropdown">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                MyAccount
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">Compare Product</a></li>
-                              <li><a class="dropdown-item" href="#">My Products</a></li>
-                              <li><a class="dropdown-item" href="#">MyWishlist</a></li>
-                              <li><a class="dropdown-item" href="#">Sign In</a></li>
-                            </ul>
-                          </div>
-                        <div class="dropdown">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Currency:USD
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">EUR</a></li>
-                              <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
-                              <li><a class="dropdown-item" href="#">Something else here</a></li> -->
-                            </ul>
-                          </div>
-                          <div class="dropdown">
-                            <button class="btn  dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Language:
-                            </button>
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="#">English-1</a></li>
-                              <li><a class="dropdown-item" href="#">English-2</a></li>
-                              <li><a class="dropdown-item" href="#">English-3</a></li>
-                            </ul>
-                          </div>
-                          <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                            
-                          </form>
-                        
-                       
-                          
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="header_kart">
-                        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-center">
+          <div class="col-3">
+            <div class="header_logo">
+              <img src="./assests/logo.png" alt="logo" />
             </div>
+          </div>
+          <div class="col-7">
+            <div class="header_info">
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  MyAccount
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Compare Product</a></li>
+                  <li><a class="dropdown-item" href="#">My Products</a></li>
+                  <li><a class="dropdown-item" href="#">MyWishlist</a></li>
+                  <li><a class="dropdown-item" href="#">Sign In</a></li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Currency:USD
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">EUR</a></li>
+                  <!-- <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Language:
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">English-1</a></li>
+                  <li><a class="dropdown-item" href="#">English-2</a></li>
+                  <li><a class="dropdown-item" href="#">English-3</a></li>
+                </ul>
+              </div>
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
+              </form>
+            </div>
+          </div>
+          <div class="col-2">
+            <div class="header_kart">
+              <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- <section class="navigation_section ">
         <div class="container"> -->
-            
-                <div class="nav_section">
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                        <div class="container">
-                          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-                          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                          </button>
-                          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav">
-                              <li class="nav-item">
-                                <a class="nav-link ps-0 present active" aria-current="page" href="#">HOME</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">ORGANIC FOOD</a>
-                              </li>
-                              <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                  FEATURES
-                                </a>
-                                <ul class="dropdown-menu">
-                                  <li>  
-                                 </li>
-                                  
-                                </ul>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">SHOP</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">BLOG</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">CONTACT US</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">PRIVACY POLICY</a>
-                              </li>
-                            
+
+    <div class="nav_section">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link ps-0 present active"
+                  aria-current="page"
+                  href="#"
+                  >HOME</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >ORGANIC FOOD</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  FEATURES
+                </a>
+                <div class="dropdown-menu data  p-4 text-muted" style="width: 900px">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-9">
+                        <div class="row">
+                          
+                          <div class="col-4">
+                            <h2>Fruits</h2>
+                            <ul class="listdata">
+                              <li class="nav_li"><a href="#">HOME</a></li>
+                              <li><a href="#">ORGANIC FOOD</a></li>
+                              <li><a href="#">FEATURES</a></li>
+                              <li><a href="#">SHOP</a></li>
+                              <li><a href="#">BLOG</a></li>
+                              <li><a href="#">CONTACT US</a></li>
+                              <li><a href="#">PRIVACY POLICY</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-4">
+                            <h2>Vegetables</h2>
+                            <ul class="listdata">
+                              <li class="nav_li"><a href="#">HOME</a></li>
+                              <li><a href="#">ORGANIC FOOD</a></li>
+                              <li><a href="#">FEATURES</a></li>
+                              <li><a href="#">SHOP</a></li>
+                              <li><a href="#">BLOG</a></li>
+                              <li><a href="#">CONTACT US</a></li>
+                              <li><a href="#">PRIVACY POLICY</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-4">
+                            <h2>Meat</h2>
+                            <ul class="listdata">
+                              <li class="nav_li"><a href="#">HOME</a></li>
+                              <li><a href="#">ORGANIC FOOD</a></li>
+                              <li><a href="#">FEATURES</a></li>
+                              <li><a href="#">SHOP</a></li>
+                              <li><a href="#">BLOG</a></li>
+                              <li><a href="#">CONTACT US</a></li>
+                              <li><a href="#">PRIVACY POLICY</a></li>
+                            </ul>
+                          </div>
+                          <div class="col-4 mt-2">
+                            <h2>Juice</h2>
+                            <ul class="listdata">
+                              <li class="nav_li"><a href="#">HOME</a></li>
+                              <li><a href="#">ORGANIC FOOD</a></li>
+                              <li><a href="#">FEATURES</a></li>
+                              <li><a href="#">SHOP</a></li>
+                              <li><a href="#">BLOG</a></li>
+                              <li><a href="#">CONTACT US</a></li>
+                              <li><a href="#">PRIVACY POLICY</a></li>
                             </ul>
                           </div>
                         </div>
-                      </nav>
-                    <!-- <ul>
+                      </div>
+                      <div class="col-3">
+                        <img src="./assests/demo.png"  style="width: auto; height: 60%;" alt="">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SHOP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">BLOG</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONTACT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">PRIVACY POLICY</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- <ul>
                         
                         <li class="nav_li"> <a href="#">HOME</a> </li>
                         <li> <a href="#">ORGANIC FOOD</a> </li>
@@ -128,142 +224,129 @@
                         <li><a href="#">CONTACT US</a></li>
                         <li><a href="#">PRIVACY POLICY</a></li>
                     </ul> -->
-                </div>
-<!--           
+    </div>
+    <!--           
         </div>
     </section> -->
 
     <section class="banner_section">
-            <div class="container">
-                <div class="banner">
-                    <div class="banner_content">
-                        <p>TASTY HEALTHY<br>
-                            ORGANIC<br>
-                            WE SELL WHAT'S<br>
-                            GOOD FOR US</p>
-                        
-                        <h5>We Supply High Quality,Premium Organic Products</h5>
+      <div class="container">
+        <div class="banner">
+          <div class="banner_content">
+            <p>
+              TASTY HEALTHY<br />
+              ORGANIC<br />
+              WE SELL WHAT'S<br />
+              GOOD FOR US
+            </p>
 
-                        <button class="banner_btn">SHOP NOW</button>
-                        
-                    </div>
-                </div>
-            </div>
+            <h5>We Supply High Quality,Premium Organic Products</h5>
+
+            <button class="banner_btn">SHOP NOW</button>
+          </div>
+        </div>
+      </div>
     </section>
-
-   
 
     <section class="categories">
-        <section class="banner_sub">
-            <div class="container">
-                <div class="row bann_sub">
-                    <div class="col-4">
-                        <div class="banner_subdata row">
-                            <div class="col-3 banner_left">
-                                <i class="fa fa-rocket" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-9  banner_right">
-                                <h3>FREE SHIPPING</h3>
-                                <p>free delivery on all orders over $99</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class=" banner_subdata row">
-                            <div class="col-3 banner_left">
-                                <i class="fa fa-usd" aria-hidden="true"></i>
-                            </div>
-                            <div class="col-9 banner_right">
-                                <h3>FREE RETURN</h3>
-                                <p>30 days money back guarantee!</p>
-                            </div>
-                        </div>
-                    
-                    </div>
-                    <div class="col-4">
-                        <div class="banner_subdata row">
-                            <div class="col-3 banner_left">
-                                <i class="fa fa-bug" aria-hidden="true"></i>
-    
-                            </div>
-                            <div class="col-9 banner_right">
-                                <h3>ONLINE SUPPORT 24/7</h3>
-                                <p>ONLINE SUPPORT 24/7
-                                    we support online 24 hours a day</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <section class="banner_sub">
         <div class="container">
-            <div class="categories_heading">
-                <h2>Popular Categories</h2>
-                <span></span>
+          <div class="row bann_sub">
+            <div class="col-4">
+              <div class="banner_subdata row">
+                <div class="col-3 banner_left">
+                  <i class="fa fa-rocket" aria-hidden="true"></i>
+                </div>
+                <div class="col-9 banner_right">
+                  <h3>FREE SHIPPING</h3>
+                  <p>free delivery on all orders over $99</p>
+                </div>
+              </div>
             </div>
-            <div class="row">
-                <div class="col-3">
-                    <div class="veg">
-                        <img src="./assests/categories/catetopimg1.png" alt="">
-                        <div class="categories_content">
-                            <h4>Vegetables</h4>
-
-                        </div>
-                    </div>
+            <div class="col-4">
+              <div class="banner_subdata row">
+                <div class="col-3 banner_left">
+                  <i class="fa fa-usd" aria-hidden="true"></i>
                 </div>
-                <div class="col-3">
-                    <div class="veg">
-                        <img src="./assests/categories/catetopimg2_1.png" alt="">
-                        <div class="categories_content">
-                            <h4>Fruits</h4>
-
-                        </div>
-                    </div>
+                <div class="col-9 banner_right">
+                  <h3>FREE RETURN</h3>
+                  <p>30 days money back guarantee!</p>
                 </div>
-                <div class="col-3">
-                    <div class="veg">
-                        <img src="./assests/categories/catetopimg3.png" alt="">
-                        <div class="categories_content">
-                            <h4>Juice</h4>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="veg">
-                        <img src="./assests/categories/catetopimg4.png" alt="">
-                        <div class="categories_content">
-                            <h4>Meats</h4>
-
-                        </div>
-                    </div>
-                </div>
-              
+              </div>
             </div>
-            
+            <div class="col-4">
+              <div class="banner_subdata row">
+                <div class="col-3 banner_left">
+                  <i class="fa fa-bug" aria-hidden="true"></i>
+                </div>
+                <div class="col-9 banner_right">
+                  <h3>ONLINE SUPPORT 24/7</h3>
+                  <p>ONLINE SUPPORT 24/7 we support online 24 hours a day</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-
+      </section>
+      <div class="container">
+        <div class="categories_heading">
+          <h2>Popular Categories</h2>
+          <span></span>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <div class="veg">
+              <img src="./assests/categories/catetopimg1.png" alt="" />
+              <div class="categories_content">
+                <h4>Vegetables</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="veg">
+              <img src="./assests/categories/catetopimg2_1.png" alt="" />
+              <div class="categories_content">
+                <h4>Fruits</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="veg">
+              <img src="./assests/categories/catetopimg3.png" alt="" />
+              <div class="categories_content">
+                <h4>Juice</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="veg">
+              <img src="./assests/categories/catetopimg4.png" alt="" />
+              <div class="categories_content">
+                <h4>Meats</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-
     <section class="products">
-        <div class="container">
-            <div class="categories_heading">
-                <h2>Our Products    </h2>
-                <span></span>
-            </div>
-            <div class="products_select">
-                <ul>
-                    <li class="active">Vegetables</li>
-                    <li>Fruits</li>
-                    <li>Juice</li>
-                    <li>Meat</li>
-                </ul>
-                <!-- <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a> -->
-            </div>
-            <div class="row" id="item-box">
-                <!-- <div class="categories_heading">
+      <div class="container">
+        <div class="categories_heading">
+          <h2>Our Products</h2>
+          <span></span>
+        </div>
+        <div class="products_select">
+          <ul>
+            <li class="active">Vegetables</li>
+            <li>Fruits</li>
+            <li>Juice</li>
+            <li>Meat</li>
+          </ul>
+          <!-- <a href="#"><i class="fa fa-lock" aria-hidden="true"></i></a> -->
+        </div>
+        <div class="row" id="item-box">
+          <!-- <div class="categories_heading">
                     <h2>Our Products    </h2>
                     <span></span>
                 </div>
@@ -312,7 +395,7 @@
                             <h3>Carrots Edible Sugar</h3>
                             <h5>$9.39</h5>
                              <p></p> -->
-                            <!-- <p><i class="fa fa-heart" aria-hidden="true"></i>
+          <!-- <p><i class="fa fa-heart" aria-hidden="true"></i>
                                 <i class="fa fa-lock" aria-hidden="true"></i>
                                 <i class="fa fa-refresh" aria-hidden="true"></i></p>
                          
@@ -402,220 +485,216 @@
                          
                         </div>
                     </div> -->
-                <!-- </div> -->
-            </div> 
+          <!-- </div> -->
         </div>
+      </div>
     </section>
 
-
     <section class="recent_blog">
-
-        <div class="container-fluid">
-            <div class="categories_heading">
-                <h2>Recently Blog</h2>
-                <span></span>
-            </div>
-
-            <div class="row">
-                <div class="col-6">
-                    <div class="blog_sub me-2">
-                        <div class="row">
-                            <div class="col-8 p-0">
-                                <img src="./assests/blog/blog1.png" alt="">
-                            </div>
-                            <div class="col-4 p-0">
-                                <div class="blog_content">
-                                    <h4><i class="fa fa-calendar-o" aria-hidden="true"></i>  21-july</h4>
-                                    <h3>Organic Panic: Finding the Right Combination</h3>
-                                    <p>Farmers have been using a mix-and-match approach to 
-                                        practices for growing their organic veggies. Which 
-                                        combination of practices was best, however, was uncertain. 
-                                        Recent research sheds light on ...</p>
-                                    <h6>ReadMore</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="blog_sub ms-2">
-                        <div class="row">
-                            <div class="col-8 p-0">
-                                <img src="./assests/blog/blog2.png" alt="">
-                            </div>
-                            <div class="col-4 p-0">
-                                <div class="blog_content">
-                                    <h4><i class="fa fa-calendar-o" aria-hidden="true"></i>  21-july</h4>
-                                    <h3>Predicting Plant-Soil Feedbacks from Plant Traits</h3>
-                                    <p>In nature, plants cannot grow without soil biota like fungi and 
-                                        bacteria. Successful plants are able to harness positive, 
-                                        growth-promoting soil organisms, while avoiding the 
-                                        negative effects of ...</p>
-                                    <h6>ReadMore</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <div class="categories_heading">
+          <h2>Recently Blog</h2>
+          <span></span>
         </div>
 
+        <div class="row">
+          <div class="col-6">
+            <div class="blog_sub me-2">
+              <div class="row">
+                <div class="col-8 p-0">
+                  <img src="./assests/blog/blog1.png" alt="" />
+                </div>
+                <div class="col-4 p-0">
+                  <div class="blog_content">
+                    <h4>
+                      <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                      21-july
+                    </h4>
+                    <h3>Organic Panic: Finding the Right Combination</h3>
+                    <p>
+                      Farmers have been using a mix-and-match approach to
+                      practices for growing their organic veggies. Which
+                      combination of practices was best, however, was uncertain.
+                      Recent research sheds light on ...
+                    </p>
+                    <h6>ReadMore</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="blog_sub ms-2">
+              <div class="row">
+                <div class="col-8 p-0">
+                  <img src="./assests/blog/blog2.png" alt="" />
+                </div>
+                <div class="col-4 p-0">
+                  <div class="blog_content">
+                    <h4>
+                      <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                      21-july
+                    </h4>
+                    <h3>Predicting Plant-Soil Feedbacks from Plant Traits</h3>
+                    <p>
+                      In nature, plants cannot grow without soil biota like
+                      fungi and bacteria. Successful plants are able to harness
+                      positive, growth-promoting soil organisms, while avoiding
+                      the negative effects of ...
+                    </p>
+                    <h6>ReadMore</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="footer_section p-4">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-8">
-                    <h4>Copyright © 2017 Plazathemes.com - All Rights Reserved.</h4>
-                </div>
-                <div class="col-4">
-                    <img src="./assests/footer.png" alt="">
-                </div>
-            </div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-8">
+            <h4>Copyright © 2017 Plazathemes.com - All Rights Reserved.</h4>
+          </div>
+          <div class="col-4">
+            <img src="./assests/footer.png" alt="" />
+          </div>
         </div>
+      </div>
     </section>
 
-   
     <script>
-        var obj=[
-            {
-                id:1,
-                image:"pro1.jpg",
-                productName:"Organic Virgin Cocunet",
-                price:"$50.39",
-                icon:"fa-lock"
+      var obj = [
+        {
+          id: 1,
+          image: "pro1.jpg",
+          productName: "Organic Virgin Cocunet",
+          price: "$50.39",
+          icon: "fa-lock",
+        },
+        {
+          id: 2,
+          image: "pro2.jpg",
+          productName: "Carrots Edible Sugar",
+          price: "$10.39",
+          icon: "fa-lock",
+        },
+        {
+          id: 3,
+          image: "pro3.jpg",
+          productName: "Dried Kiwis Slices",
+          price: "$150.39",
+          icon: "fa-lock",
+        },
+        {
+          id: 4,
+          image: "pro4.jpg",
+          productName: "Cranberry Pomogranate",
+          price: "$80.39",
+          icon: "fa-lock",
+        },
+        {
+          id: 5,
+          image: "pro5.jpg",
+          productName: "Ambrosia Apples",
+          price: "$25.39",
+          icon: "fa-lock",
+        },
+        {
+          id: 6,
+          image: "pro6.jpg",
+          productName: "Vegetables Basket",
+          price: "$11.39",
+          icon: "fa-lock",
+        },
+        {
+          id: 7,
+          image: "pro7.jpg",
+          productName: "Orange Navel Large",
+          price: "$10.39",
+          icon: "fa-lock",
+        },
+        {
+          id: 8,
+          image: "pro8.jpg",
+          productName: "Tropicana Orange Juice",
+          price: "$10.39",
+          icon: "fa-lock",
+        },
+      ];
 
-            },
-            {
-                id:2,
-                image:"pro2.jpg",
-                productName:"Carrots Edible Sugar",
-                price:"$10.39",
-                icon:"fa-lock"
-
-            },
-            {
-                id:3,
-                image:"pro3.jpg",
-                productName:"Dried Kiwis Slices",
-                price:"$150.39",
-                icon:"fa-lock"
-
-            },
-            {
-                id:4,
-                image:"pro4.jpg",
-                productName:"Cranberry Pomogranate",
-                price:"$80.39",
-                icon:"fa-lock"
-
-            },
-            {
-                id:5,
-                image:"pro5.jpg",
-                productName:"Ambrosia Apples",
-                price:"$25.39",
-                icon:"fa-lock"
-
-            },
-            {
-                id:6,
-                image:"pro6.jpg",
-                productName:"Vegetables Basket",
-                price:"$11.39",
-                icon:"fa-lock"
-
-            },
-            {
-                id:7,
-                image:"pro7.jpg",
-                productName:"Orange Navel Large",
-                price:"$10.39",
-                icon:"fa-lock"
-
-            },
-            {
-                id:8,
-                image:"pro8.jpg",
-                productName:"Tropicana Orange Juice",
-                price:"$10.39",
-                icon:"fa-lock"
-
-            }
-
-
-        ]
-
-        let itemBox=document.getElementById("item-box");
-    //     
-        function showdata(data) {
-            // itemBox.innerHTML = "";
+      let itemBox = document.getElementById("item-box");
+      //
+      function showdata(data) {
+        itemBox.innerHTML = "";
         data.forEach(function (elm, i, arr) {
-            // console.log(itemBox)
+          // console.log(itemBox)
 
+          // <----------create Element------------>
 
-            // <----------create Element------------>
+          let colElm = document.createElement("div");
+          let subcolElm = document.createElement("div");
+          let imageElm = document.createElement("img");
+          let productCOntentDiv = document.createElement("div");
+          let linkedname = document.createElement("a");
+          let productName = document.createElement("h3");
+          // let linkedp=document.createElement("a")
+          let productPrice = document.createElement("h5");
+          let linkicon = document.createElement("a");
+          let addKart = document.createElement("i");
 
-            let colElm=document.createElement("div");
-            let subcolElm=document.createElement("div");
-            let imageElm=document.createElement("img");
-            let productCOntentDiv=document.createElement("div");
-            let productName=document.createElement("h3");
-            let productPrice=document.createElement("h5");
-            let linkElm=document.createElement("a");
-            let addKart=document.createElement("i");
+          //<------------------- Set attributes ------------------->
 
-             //<------------------- Set attributes ------------------->
+          colElm.setAttribute("class", "col-3");
+          subcolElm.setAttribute("class", "products_list");
+          productCOntentDiv.setAttribute("class", "product_listcontent");
+          imageElm.setAttribute("src", "assests/products/" + elm.image);
+          //  linkElm.setAttribute("class","linkdata")
+          addKart.setAttribute("class", "fa " + elm.icon);
+          //  linkedname.setAttribute("href","#")
+          //  linkedicon.setAttribute("href","#")
 
-             colElm.setAttribute("class","col-3");
-             subcolElm.setAttribute("class","products_list");
-             productCOntentDiv.setAttribute("class","product_listcontent");
-             imageElm.setAttribute("src","assests/products/"+elm.image);
-             addKart.setAttribute("class","fa " +elm.icon);
-            //  linkElm.setAttribute("class",)
-    //          <div class="col-3">
-    // //     <div class="products_list">
-    // //         <img src="./assests/products/pro4.jpg" alt="">
-    // //         <div class="product_listcontent">
-    // //             
-    // //             <h3>Cranberry Pomogranate</h3>
-    // //             <h5>$11.39</h5>
-                    
-    // //            a <i class="fa fa-lock" aria-hidden="true"></i>a
-    // //            
-             
-    // //         </div>
-    // //     </div>
-    // // </div>
+          //  linkElm.setAttribute("class",)
+          //          <div class="col-3">
+          // //     <div class="products_list">
+          // //         <img src="./assests/products/pro4.jpg" alt="">
+          // //         <div class="product_listcontent">
+          // //
+          // //             <h3>Cranberry Pomogranate</h3>
+          // //             <h5>$11.39</h5>
 
-            // <------------get value-------->
-            addKart.innerText=linkElm;
-            productName.innerText=elm.productName;
-            productPrice.innerText=elm.price;
+          // //            a <i class="fa fa-lock" aria-hidden="true"></i>a
+          // //
 
-            // addKart.innerText=elm.icon;
+          // //         </div>
+          // //     </div>
+          // // </div>
 
-            addKart.innerText=linkElm;
-            linkElm.innerText=elm.icon;
-            
-            productCOntentDiv.append(productName,productPrice,addKart);
-            subcolElm.append(imageElm,productCOntentDiv)
-            colElm.append(subcolElm);
-            itemBox.append(colElm);
-        
+          // <------------get value-------->
+          // addKart.innerText=linkElm;
+          productName.innerText = elm.productName;
+          productPrice.innerText = elm.price;
 
+          // addKart.innerText=elm.icon;
+          // linkElm.innerText=elm.icon;
 
+          // linkElm.appendChild(addKart);
+          linkedname.appendChild(productName);
+          linkicon.appendChild(addKart);
 
-
-
+          productCOntentDiv.append(linkedname, productPrice, linkicon);
+          subcolElm.append(imageElm, productCOntentDiv);
+          colElm.appendChild(subcolElm);
+          itemBox.appendChild(colElm);
         });
-        }
-        showdata(obj);
-        // console.log(obj)
-
+      }
+      showdata(obj);
+      // console.log(obj)
     </script>
     <script src="./js/bootstrap.bundle.min.js"></script>
-	<script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
-</body>
+  </body>
 </html>

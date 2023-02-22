@@ -44,10 +44,20 @@
     padding: 0;
     
 }
+.brdr_clr{
+    border:1px solid #ccc;
+}
 
 .nav_section{
     padding: 38px 0 28px;
     border-bottom: 1px solid #ccc;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 75px;
+}
+.navbar-expand-lg .navbar-nav .dropdown-menu:hover {
+    border-top: 2px solid #62d2a2;
 }
 /* .nav_section ul{
     display: fle;
@@ -80,6 +90,13 @@
 .nav_section>ul>.nav_li a{
     color:#7bd2a2;
     font-weight: 600;
+}
+.listdata{
+    list-style: none;
+}
+.listdata  li a{
+    font-size: 13px;
+    color:#717171
 }
 .banner{
     background-image: url('../assests/slider2.png');
@@ -240,7 +257,7 @@
 
 }
 .products_list{
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     padding: 10px 15px;
     border-radius: 10px;
     margin-bottom: 50px;
@@ -259,7 +276,7 @@
     left: 0;
     right: 0;
 }
-.product_listcontent .fa-lock{
+/* .product_listcontent .addKart{
     height: 40px;
     width: 40px;
     line-height: 26px;
@@ -268,7 +285,8 @@
     border-radius: 50%;
     transition: all 0.8s ease;
 
-}
+} */
+
 /* .product_listcontent .fa-lock:hover>.product_listcontent.fa-refresh{
     background-color: #7bd2a2;
 } */
@@ -283,16 +301,18 @@
     transform: translateX(-31px);
 
 }
-.product_listcontent .fa-refresh{
+.product_listcontent .fa-lock{
     height: 40px;
+    position: absolute;
     width: 40px;
     line-height: 26px;
     padding: 5px;
-    border: 1px solid #62d2a2;
+    border: 2px solid #62d2a2;
     border-radius: 50%;
-    visibility: hidden;
-    transform: translateX(-26px);
-    transition: all 0.8s ease;
+    /* visibility: hidden; */
+    /* transform: translateX(-26px); */
+    /* transition: all 0.8s ease; */
+    left: 43%;
 
 }
 .product_listcontent .fa-heart{
@@ -302,7 +322,7 @@
     padding: 5px;
     border: 1px solid #62d2a2;
     border-radius: 50%;   
-    visibility: hidden;
+    /* visibility: hidden; */
     transform: translateX(26px);
     transition: all 0.8s ease;
 }
