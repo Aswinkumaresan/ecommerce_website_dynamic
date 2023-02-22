@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap.min.css">
+    <title>Product</title>
+</head>
+<body>
+   
+    <div class="container mt-5">
+        
+        <div class="row" id="item-box">
+            
+        </div>
+    </div>
+    
+    <script>
+        var obj=[
+            {
+                id:1,
+                image:"pro1.jpg",
+                productName:"Organic Virgin Cocunet",
+                price:"$50.39"
+
+            },
+            {
+                id:2,
+                image:"pro2.jpg",
+                productName:"Carrots Edible Sugar",
+                price:"$10.39"
+
+            },
+            {
+                id:1,
+                image:"pro3.jpg",
+                productName:"Dried Kiwis Slices",
+                price:"$150.39"
+
+            },
+            {
+                id:1,
+                image:"pro4.jpg",
+                productName:"Cranberry Pomogranate",
+                price:"$80.39"
+
+            }
+
+
+        ]
+
+        let itemBox=document.getElementById("item-box");
+    //     
+        function showdata(data) {
+            // itemBox.innerHTML = "";
+        data.forEach(function (elm, i, arr) {
+            // console.log(itemBox)
+
+
+            // <----------create Element------------>
+
+            let colElm=document.createElement("div");
+            let subcolElm=document.createElement("div");
+            let imageElm=document.createElement("img");
+            let productCOntentDiv=document.createElement("div");
+            let productName=document.createElement("h3");
+            let productPrice=document.createElement("h5");
+            let addKart=document.createElement("i");
+
+             //<------------------- Set attributes ------------------->
+
+             colElm.setAttribute("class","col-3");
+             subcolElm.setAttribute("class","products_list");
+             productCOntentDiv.setAttribute("class","product_listcontent");
+             imageElm.setAttribute("src","assests/products/"+elm.image);
+             addKart.setAttribute("class","fa",elm.addKart);
+
+    //          <div class="col-3">
+    // //     <div class="products_list">
+    // //         <img src="./assests/products/pro4.jpg" alt="">
+    // //         <div class="product_listcontent">
+    // //             
+    // //             <h3>Cranberry Pomogranate</h3>
+    // //             <h5>$11.39</h5>
+    // //             <i class="fa fa-lock" aria-hidden="true"></i>
+    // //            
+             
+    // //         </div>
+    // //     </div>
+    // // </div>
+
+            // <------------get value-------->
+            productName.innerText=elm.productName;
+            productPrice.innerText=elm.price;
+
+
+
+
+            productCOntentDiv.append(productName,productPrice,addKart);
+            subcolElm.append(imageElm,productCOntentDiv)
+            colElm.append(subcolElm);
+            itemBox.append(colElm);
+            //  subcolElm.append(productName,productPrice,addKart);
+            //  colElm.append(imageElm,subcolElm);
+
+            // productCOntentDiv.append(productName,productPrice,addKart);
+            // subcolElm.append(imageElm,productCOntentDiv);
+            // colElm.append(subcolElm);
+            // itemBox.append(colElm);
+            // colElm.append(productCOntentDiv);
+            // productdata.append(colElm);
+            // productCOntentDiv.append(productName,productPrice);
+            // colElm.append(productCOntentDiv);
+            // itemBox.append(colElm);
+
+
+
+
+
+        });
+        }
+        showdata(obj);
+        console.log(obj)
+
+    </script>
+</body>
+</html>
