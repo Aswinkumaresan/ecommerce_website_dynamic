@@ -40,6 +40,12 @@
 .header_kart i:hover{
     color:#62d2a2;
 }
+
+.offcanvas-start {
+   right:0;
+    }
+
+
 .nav_section{
     padding: 0;
     
@@ -93,6 +99,7 @@
 }
 .listdata{
     list-style: none;
+    padding: 0;
 }
 .listdata  li a{
     font-size: 13px;
@@ -200,6 +207,7 @@
     background-color: #ccc;
     /* overflow: hidden; */
     opacity: 0.6;
+    border-radius: 24px;
 }
 .categories_content{
     
@@ -276,7 +284,13 @@
     left: 0;
     right: 0;
 }
-/* .product_listcontent .addKart{
+.iconbtn{
+    border: none;
+}
+#qtyshow{
+    width: 20px;
+}
+.linkicon_listcontent .addKart{
     height: 40px;
     width: 40px;
     line-height: 26px;
@@ -285,7 +299,42 @@
     border-radius: 50%;
     transition: all 0.8s ease;
 
+}
+/* .dataimage{
+    width: 50px;
+    height: 50px;
+    border:2px solid grey;
+    border-radius: 50%;
 } */
+
+.showKartcompletedata{
+    display: flex;
+    margin-bottom: 50px;
+}
+.dataimage{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+/* .datashow{
+    display: flex;
+} */
+.showContentData h3{
+    /* color:red; */
+    font-size:15px;
+}
+.showContentData h4{
+    /* color:rgb(0, 255, 47); */
+    font-size:15px;
+}
+.showContentData h5{
+    /* color:rgb(47, 0, 255); */
+    font-size:15px;
+}
+.btnitemadd{
+    padding: 4px 15px;
+    margin: 5px;
+}
 
 /* .product_listcontent .fa-lock:hover>.product_listcontent.fa-refresh{
     background-color: #7bd2a2;

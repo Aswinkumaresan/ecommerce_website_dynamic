@@ -10,13 +10,46 @@
 <body>
    
     <div class="container mt-5">
+
         
-        <div class="row" id="item-box">
-            
+        
+        <!-- <div class="row" id="item-box">
+
+            <div class="col-3">
+                <div class="pname">
+                    <h3>name</h3>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="pprice">
+                    <h3>price</h3>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div class="pquantity">
+                    <h3>quantity</h3>
+                </div>
+            </div> -->
+                
+            <button id="addbtn"> + </button>
+                
         </div>
-    </div>
-    
+        
     <script>
+        addclickbtn=document.getElementById("addbtn");
+        let count=0;
+
+        function addclick(){
+                count++
+                console.log(count);
+            
+
+        }
+
+        addclickbtn.addEventListerner("click","addclick")
+    </script>
+    <!-- <script>
         var obj=[
             {
                 id:1,
@@ -123,6 +156,6 @@
         showdata(obj);
         console.log(obj)
 
-    </script>
+    </script> -->
 </body>
 </html>
