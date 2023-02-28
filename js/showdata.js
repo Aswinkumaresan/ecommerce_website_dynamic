@@ -204,19 +204,20 @@ function deletecartItems(id){
 
 function showTotalPrice(cartItem){
   let showTotat=document.getElementById("showTotalPrice");
+  showTotat.innerText="";
   total=0;
   
   for(let i=0;i<cartItem.length;i++){
-      // if(cartItem.quantity !=0){
+      if(cartItem.quantity!=0){
         total +=(cartItem[i].price * cartItem[i].quantity);
         console.log(total);
         showTotat.innerText="Total Price :" + total;
-
-      // }
-      // else
-      // {
-      //   return showTotat;
-      // }
+    
+      }
+      else
+      {
+        return showTotat=total;
+      }
    
   }
 
