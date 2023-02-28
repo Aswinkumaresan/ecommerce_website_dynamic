@@ -120,13 +120,16 @@ function addCartItem(id) {
     return item.id === id;
   });
   if (findData) {
-    cartItem.map(function (item) {
+    let updatecartlist=cartItem.map(function (item) {
       if (item.id === id) {
         item.quantity += 1;
         return item;
       } else return item;
-    });
-    console.log(cartItem);
+    })
+    cartItem=updatecartlist;
+    updatekartShow(cartItem);
+    showTotalPrice(cartItem);
+    // console.log(cartItem);
   } else {
     let newItemCart = obj.find(function (item) {
       return item.id === id;
@@ -135,8 +138,92 @@ function addCartItem(id) {
     cartItem.push(newItemCart);
     console.log(cartItem);
     updatekartShow(cartItem);
+    showTotalPrice(cartItem);
   }
 }
+
+
+function decrementcartitem(id){
+  let finddata = cartItem.find(function(item){
+      return item.id === id;
+  });
+  if (finddata){
+      if (finddata.quantity===1){
+          let updatecartlist=cartItem.filter(function(item){
+              return item.id !== id;
+          });
+          cartItem=updatecartlist;
+          updatekartShow(cartItem);
+          showTotalPrice(cartItem);
+          
+          
+      }
+      else{
+          let updatecartlist=cartItem.map(function(item){
+
+              if (item.id === id){
+                 item.quantity -= 1;
+                 return item;
+            }
+            else return item;
+            })
+            console.log(cartItem);
+            cartItem=updatecartlist;
+            updatekartShow(cartItem);
+            showTotalPrice(cartItem);
+      }
+  }
+}
+
+function deletecartItems(id){
+    let finddata = cartItem.find(function(item){
+        return item.id == id;
+    })
+    if (finddata){
+        let updateitem=cartItem.filter(function(item){
+            return item.id !== id;
+    });
+    cartItem=updateitem;
+    updatekartShow(cartItem);
+    showTotalPrice(cartItem);
+  }
+}
+
+// function showTotalPrice(cartItem){
+//   let showTotat=document.getElementById("showTotalPrice");
+//   total=0;
+//   for(i=0;i<cartItem.length;i++){
+//     total=(cartItem[i].price * cartItem[i].quantity);
+//     console.log(total);
+//     showTotat.innerText= "Total Price :" + total;
+//   }
+
+
+// }
+// showTotalPrice(cartItem)
+
+function showTotalPrice(cartItem){
+  let showTotat=document.getElementById("showTotalPrice");
+  total=0;
+  
+  for(let i=0;i<cartItem.length;i++){
+      // if(cartItem.quantity !=0){
+        total +=(cartItem[i].price * cartItem[i].quantity);
+        console.log(total);
+        showTotat.innerText="Total Price :" + total;
+
+      // }
+      // else
+      // {
+      //   return showTotat;
+      // }
+   
+  }
+
+
+}
+showTotalPrice(cartItem)
+
 
 let addKartShowData = document.getElementById("addshowcart");
 
@@ -152,12 +239,13 @@ function updatekartShow(newdata) {
     let kartProNme = document.createElement("h3");
     let kartProqty = document.createElement("h5");
     let kartProPrice = document.createElement("h4");
-    let totalPrice = document.createElement("h4");
     let buybtn = document.createElement("button");
     let deletebtn = document.createElement("button");
+    
+    let totalPrice = document.createElement("h4");
 
     // kart add and sub
-    let itemqtyadd = document.createElement("button");
+    let itemqtyadd  = document.createElement("button");
     // let qtydisplay=document.createElement("input")
     let itemqtsub = document.createElement("button");
 
@@ -192,83 +280,67 @@ function updatekartShow(newdata) {
 
     karproimage.setAttribute("src", "assests/products/" + elm.image);
 
-    showKartdata.append(
-      kartProNme,
-      kartProqty,
-      kartProPrice,
-      totalPrice,
-      itemqtyadd,
-      itemqtsub,
-      deletebtn
-    );
+    showKartdata.append(kartProNme,kartProqty,kartProPrice,totalPrice,itemqtyadd,itemqtsub,deletebtn);
     showKartImagedata.appendChild(karproimage);
-    showKartcompletedata.append(showKartImagedata, showKartdata);
+    showKartcompletedata.append(showKartImagedata,showKartdata);
     addKartShowData.append(showKartcompletedata);
 
-
-    // addKartShowData.appendChild(showKartcompletedata);
-    // overalldiv.appendChild(buybtn);
-    // overalldiv.append(buybtn);
-
-    // addKartShowData.appendChild(buybtn);
-
-    // itemqtyadd.addEventListener("click",()=>{
-    //   qtydisplay.value=parseInt(qtydisplay.value) + 1;
-    //   console.log(qtydisplay);
-    // })
-
-    // itemqtsub.addEventListener("click",()=>{
-    //   if(qtydisplay.value<=0){
-    //     qtydisplay.value=0;
-    //   }
-    //   else{
-    //     qtydisplay.value=parseInt(qtydisplay.value) - 1;
-
-    //   }
-    //   // console.log(qtydisplay);
-    // })
-
-    let quantity = 1;
-
-    itemqtyadd.addEventListener("click", () => {
-      quantity++;
-      kartProqty.innerText = "Product Quantity:  " + quantity;
-      // console.log(kartProqty);
-      kartProPrice.innerText = "Product Price: " + elm.price;
-      // console.log(kartProPrice);
-      totalPrice.innerText = "Total price :" + quantity * elm.price;
-      // console.log(totalPrice  )
-    });
-
-    itemqtsub.addEventListener("click", () => {
-      if (quantity > 0) {
-        quantity--;
-      } else {
-        return;
-      }
-
-      kartProqty.innerText = "Product Quantity:  " + quantity;
-      kartProPrice.innerText = "Product Price: " + elm.price;
-      // console.log(kartProPrice);
-      totalPrice.innerText = "Total price :" + quantity * elm.price;
-      // console.log(totalPrice  )
-    });
+    let qty=1;
+    itemqtyadd.onclick=addCartItem.bind(null,elm.id);
+    itemqtsub.onclick=decrementcartitem.bind(null,elm.id);
+    deletebtn.onclick=deletecartItems.bind(null,elm.id);
 
 
-    // deletebtn.onclick = deletedata.bind(null, elm.id);
-    // window.onload = update(cartItem);
-
-    // function deletedata(id) {
-    //   let finddata = cartItem.find(function (items) {
-    //     return items.id === id;
-    //   });
-    //   if (finddata) {
-    //     let updateobject = cartItem.filter(function (items) {
-    //       return items.id !== id;
-    //     });
-    //     cartItem = updateobject;
-    //     update(cartItem);
-    //   }
-    // }
-  });
+   });
 }
+
+
+// window.onload = updatekartShow(cartItem);
+
+// function deletedata(id) {
+//   let finddata = cartItem.find(function (item) {
+//     return item.id === id;
+//   });
+//   if (finddata) {
+//     let updateobject = cartItem.filter(function (item) {
+//       return item.id !== id;
+//     });
+//     cartItem = updateobject;
+//     update(cartItem);
+//   }
+// }
+
+
+    
+// let quantity = 1;
+
+    
+//     itemqtyadd.addEventListener("click",addition);
+
+//     // itemqtyadd.addEventListener("click", () => 
+      
+//       function addition (id){
+//       quantity++;
+//       kartProqty.innerText = "Product Quantity:  " + quantity;
+//       // console.log(kartProqty);
+//       kartProPrice.innerText = "Product Price: " + elm.price;
+//       // console.log(kartProPrice);
+//       totalPrice.innerText = "Total price :" + quantity * elm.price;
+//       // console.log(totalPrice  )
+//     };
+
+
+
+//     itemqtsub.addEventListener("click", () => {
+//       if (quantity > 0) {
+//         quantity--;
+//       } else {
+//         return;
+//       }
+
+//       kartProqty.innerText = "Product Quantity:  " + quantity;
+//       kartProPrice.innerText = "Product Price: " + elm.price;
+//       // console.log(kartProPrice);
+//       totalPrice.innerText = "Total price :" + quantity * elm.price;
+//       // console.log(totalPrice  )
+//     });
